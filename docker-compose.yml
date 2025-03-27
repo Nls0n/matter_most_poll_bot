@@ -1,0 +1,17 @@
+version: '3'
+services:
+  tarantool:
+    image: tarantool/tarantool:latest
+    ports:
+      - "3301:3301"
+    volumes:
+      - ./migrations:/opt/tarantool
+
+  bot:
+    build: .
+    environment:
+      - MATTERMOST_URL=http://mattermost:8065
+      - MATTERMOST_TOKEN=your_token
+      - TARANTOOL_ADDR=tarantool:3301
+    depends_on:
+      - tarantool
