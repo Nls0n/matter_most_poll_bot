@@ -4,7 +4,7 @@
 
 1. Клонируйте репозиторий:
    ```bash
-   git clone https://github.com/Nls0n/mattermost-poll-bot.git
+   git clone https://github.com/Nls0n/matter_most_poll_bot.git
    ```
 
 2. Запустите сервисы:
